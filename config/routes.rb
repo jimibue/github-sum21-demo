@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   
   root "subs#index"
 
-  resources :subs
+  resources :subs do
+    resources :topics
+  end
 
   get '/tacos', to:'subs#tacos'
 end

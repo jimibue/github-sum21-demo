@@ -11,7 +11,10 @@ const Subs = (props) => {
             return (
                 <div>
                     <h1>{sub.name}</h1>
-                    <a href={`/subs/${sub.id}`}>show</a>
+                    {/* this hits subs#show */}
+                    <a href={`/subs/${sub.id}`}>show sub</a> 
+                    {/* this hits topics#index */}
+                    <a href={`/subs/${sub.id}/topics`}>show sub and Topic</a>
                     <a href={`/subs/${sub.id}/edit`}>edit</a>
                     <a href={`/subs/${sub.id}`} data-method='delete'>delete</a>
                 </div>
