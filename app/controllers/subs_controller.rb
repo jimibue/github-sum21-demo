@@ -1,7 +1,8 @@
 class SubsController < ApplicationController
 
     def index
-        render component: "Subs"
+        @subs = Sub.all
+        render component: "Subs", props: {subs: @subs, yo: 'yo here'}
     end
 
     def show
@@ -14,6 +15,12 @@ class SubsController < ApplicationController
 
     def new
         render component: "SubNew"
+    end
+
+    def destroy
+      @sub = Sub.find(params[:id])
+      @sub.destroy
+      redirect_to root_path
     end
 
     def tacos
