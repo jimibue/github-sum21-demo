@@ -21,6 +21,7 @@ const Topics = (props) => {
             <p>Sub is {sub.name}</p>
             <p>Sub id is {sub.id}</p>
             <h1>topics</h1>
+            <a href={`/subs/${sub.id}/topics/new`}>new topic</a>
             {renderTopics()}
         </div>
     )
