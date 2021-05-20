@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: be59d0b88e93978a0c4eaa931f3fce4bcf091bab
+  revision: 3f78cb13cfa5eaa811b7d05f9df46e7f27bab348
   branch: master
   specs:
     faker (2.18.0)
@@ -122,7 +122,7 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
-    nokogiri (1.11.4-x86_64-darwin)
+    nokogiri (1.11.5-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
     pry (0.14.1)
@@ -255,9 +255,6 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
-
-RUBY VERSION
-   ruby 2.7.2p137
 
 BUNDLED WITH
    2.2.11

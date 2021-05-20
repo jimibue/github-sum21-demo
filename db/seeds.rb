@@ -7,15 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 Sub.destroy_all
-Topic.destroy_all
+
 10.times do
   x = Faker::Verb.simple_present
   y = Faker::Verb.ing_form
   z = Faker::Verb.base
+  
   sub = Sub.create(name: "#{x} #{y} #{z}")
   4.times do
     sub.topics.create(name: Faker::Verb.simple_present, body: Faker::Quote.famous_last_words)
+    
+    # this also would work
+    # Topic.create(sub_id:sub.id, name: Faker::Verb.simple_present, body: Faker::Quote.famous_last_words)
   end
+
 end
 puts "seeded #{Sub.all.size} Subs"
 puts "first sub name: #{Sub.first.name}"
